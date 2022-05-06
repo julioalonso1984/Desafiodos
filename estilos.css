@@ -209,6 +209,10 @@ form{
     background-size: cover;
     font-size: 30px;
     color: rgb(11, 16, 85);
+    text-shadow: 2px 2px 2px black;
+}
+form input::placeholder {
+    color: beige !important; 
 }
 form div{
     margin-left: 10%;
@@ -216,11 +220,14 @@ form div{
 }
 form div input{
     background-color: transparent !important;
-    color: white !important;
+    color: beige !important;
+}
+.state{
+    color: beige;
 }
 form div textarea{
     background-color: transparent !important;
-    color: white !important;
+    color: beige !important;
 }
 form button{
     margin-left: 10%;
@@ -239,7 +246,7 @@ form button{
     background-image: url(./imagenes/animales.jpg);
     background-position: top;
     background-size: cover;
-    height: 600px;
+    height: 800px;
 }
 .pasos{
 
@@ -387,7 +394,7 @@ form button{
     .foto10{
         grid-column: 2/3;
         grid-row: 5/6;
-        background-image: url(../imagenes/galeria/foto10_1.jpg);
+        background-image: url(./imagenes/galeria/foto10_1.jpg);
     }
 }
 @media only screen and (min-width: 1024px){
@@ -462,7 +469,7 @@ form button{
 .foto10{
     grid-column: 3/5;
     grid-row: 4/5;
-    background-image: url(../imagenes/galeria/foto10.png);
+    background-image: url(./imagenes/galeria/foto10.png);
 }
 .foto10:hover{
     transform: rotateY(180deg);
