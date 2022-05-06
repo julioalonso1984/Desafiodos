@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -15,6 +15,7 @@
 </head>
 
 <body>
+    
     <!-- navbar inicio -->
     <div class="container-fluid" id="header">
         <div class="row">
@@ -32,16 +33,16 @@
                                 <a class="nav-link" href="../index.html">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="./pages/denunciar.html">¿Cómo hacer una denuncia?</a>
+                                <a class="nav-link" href="./denunciar.html">¿Cómo hacer una denuncia?</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="./pages/galeria.html">Galería de animales libres</a>
+                                <a class="nav-link" href="./galeria.html">Galería de animales libres</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="./pages/integrantes.html">Integrantes de la Asociación</a>
+                                <a class="nav-link" href="./integrantes.html">Integrantes de la Asociación</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="./pages/legislacion.html">Leyes en defensa de animales</a>
+                                <a class="nav-link" href="./legislacion.html">Leyes en defensa de animales</a>
                             </li>
                         </ul>
                     </div>
@@ -51,40 +52,55 @@
     </div>
     <!-- navbar fin -->
     <!-- Formulario -->
-    <form action="/action_page.php" class="was-validated">
-        <div class="form-group">
-            <label for="uname">Nombre</label>
-            <input type="text" class="form-control" id="uname" placeholder="Ingrese su nombre" name="uname" required>
-            <div class="valid-feedback">Valid.</div>
-            <div class="invalid-feedback">Please fill out this field.</div>
+    
+    <form class="row g-0">
+      <div class="col-md-6">
+        <label for="formGroupExampleInput" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Ingrese su nombre completo">
+      </div>
+      <div class="col-md-6">
+        <label for="formGroupExampleInput2" class="form-label">Apellido</label>
+        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Ingrese su apellido">
+      </div>
+      <div class="col-md-6">
+        <label for="inputEmail4" class="form-label">Email</label>
+        <input type="email" class="form-control" id="inputEmail4" placeholder="Ingrese su correo electrónico">
+      </div>
+      <div class="col-md-6">
+        <label for="inputCity" class="form-label">País</label>
+        <input type="text" class="form-control" id="inputCity">
+      </div>
+      <div class="col-md-6">
+        <label for="inputState" class="form-label">Provincia</label>
+        <select id="inputState" class="form-select state">
+          <option selected>Mendoza</option>
+          <option>Buenos Aires</option>
+          <option>San Juan</option>
+          <option>San Luis</option>
+          <option>La Rioja</option>
+        </select>
+      </div>
+      <div class="mb-10 col-6">
+        <label for="exampleFormControlTextarea1" class="form-label">¿Cuál es su consulta?</label>
+        <textarea class="form-control duda" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+      <div class="col-12">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="gridCheck">
+          <label class="form-check-label" for="gridCheck">
+            Acepto los términos
+          </label>
         </div>
-        <div class="form-group">
-            <label for="uname">Apellido</label>
-            <input type="text" class="form-control" id="uname" placeholder="Ingrese su Apellido" name="uname" required>
-            <div class="valid-feedback">Valid.</div>
-            <div class="invalid-feedback">Please fill out this field.</div>
-        </div>
-        <div class="form-group">
-            <label for="email">Ingrese su Mail</label>
-            <input type="email" class="form-control" id="uname" placeholder="Ingrese su Correo" name="uname" required>
-            <div class="valid-feedback">Valid.</div>
-            <div class="invalid-feedback">Please fill out this field.</div>
-        </div>
-        <div class="form-group">
-            <label for="comment">¿Cuál es su consulta</label>
-            <textarea class="form-control" rows="5" id="comment"></textarea>
-        </div>
-        <div class="form-group form-check">
-            <label class="form-check-label">
-                <input class="form-check-input" type="checkbox" name="remember" required> Estoy de Acuerdo.
-                <div class="invalid-feedback">Marque esta casilla de verificación para continuar.</div>
-            </label>
-        </div>
-        <button type="submit" class="btn btn-success">Submit</button>
+      </div>
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary" id="enviar">Enviar</button>
+      </div>
     </form>
 
+    <!-- fin formulario -->
 
-    <script src="js/bootstrap.min.js"></script>
+
+    <script src="../js/bootstrap.min.js"></script>
 </body>
 
 </html>
